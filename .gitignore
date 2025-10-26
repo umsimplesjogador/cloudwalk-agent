@@ -1,0 +1,35 @@
+# === Python ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.env
+.env
+venv/
+.venv/
+*.db
+*.sqlite3
+
+# === VSCode ===
+.vscode/
+
+# === Data & Cache ===
+data/
+cache/
+tmp/
+*.faiss
+
+# === Logs ===
+*.log
+logs/
+nohup.out
+
+# === Model/Embedding cache ===
+*.bin
+*.pt
+*.pkl
+*.sav
+
+# === OS ===
+.DS_Store
+Thumbs.db
