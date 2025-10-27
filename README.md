@@ -25,7 +25,7 @@ Agente conversacional que responde perguntas sobre a Cloudwalk e seus produtos.
 
 ## 🚀 Rodando localmente com Docker
 
-### 1️⃣ Pré-requisitos
+###  Pré-requisitos
 
 - [Docker](https://docs.docker.com/get-docker/) instalado
 - Chave da API Gemini (`GEMINI_API_KEY`)
@@ -34,36 +34,6 @@ Agente conversacional que responde perguntas sobre a Cloudwalk e seus produtos.
 
 git clone https://github.com/umsimplesjogador/cloudwalk-agent.git
 cd cloudwalk-agent
-
-
-
----
-
-## 🛠 Instruções para rodar o projeto localmente sem Docker
-
-### Instal as dependências
-
-pip install -r requirements.txt
-
-
-### Criar arquivo `.env`
-
-Na raiz do projeto, crie o arquivo `.env` com sua chave da Gemini API:
-
-GEMINI_API_KEY=sua_chave_aqui
-
-
-### Execute a aplicação
-
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-
-
-### Acesse a aplicação:
-
-Frontend chat: http://localhost:8000/chat
-
-Swagger UI: http://localhost:8000/docs
-
 
 ## Rodar com Docker
 
@@ -77,6 +47,37 @@ Swagger UI: http://localhost:8000/docs
 
 docker ps          # lista containers em execução
 docker stop <ID>   # encerra container
+
+
+---
+
+## 🛠 Instruções para rodar o projeto localmente sem Docker
+
+### Instala as dependências
+
+pip install -r requirements.txt
+
+
+### Criar arquivo `.env`
+
+Na raiz do projeto, crie o arquivo `.env` com sua chave da Gemini API:
+
+GEMINI_API_KEY=sua_chave_aqui
+
+
+### Execute a aplicação
+
+python -m venv .venv
+.venv\Scripts\activate  # (Windows)
+pip install -r requirements.txt
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+
+
+### Acesse a aplicação:
+
+Frontend chat: http://localhost:8000/chat
+
+Swagger UI: http://localhost:8000/docs
 
 
 ## CI/CD (GitHub Actions + DockerHub + Render)
